@@ -42,16 +42,16 @@ public class Main {
         int turno = sc.nextInt();
         System.out.println();
 
-        for(int i = 1; i <= turno; i++) {
+        for (int i = 1; i <= turno; i++) {
             champion1.takeDamage(champion2);
             champion2.takeDamage(champion1);
-            System.out.println("Resultado do turno " + i +":");
+            System.out.println("Resultado do turno " + i + ":");
             System.out.println(champion1.status());
             System.out.println(champion2.status());
             System.out.println();
 
-            if(champion1.getLife() <= 0 || champion2.getLife() <=0){
-                i = turno;
+            if (champion1.getLife() <= 0 || champion2.getLife() <= 0) {
+                break;
             }
 
         }
@@ -59,6 +59,6 @@ public class Main {
         System.out.println("FIM DO COMBATE");
 
 
-
+        sc.close();
     }
 }
